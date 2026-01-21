@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Protest Revolution',sans-serif;
+}
+
+.services,
+.projects,
+.journey {
+    background: linear-gradient(to bottom, #ddd3d3 30%, #9c8e8e 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 128px;
+    padding-right: 128px;
+
+    @media(max-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+section {
+    h2 {
+        text-align: center;
+        margin-bottom: 32px;
+        text-transform: uppercase;
+
+        color: #313131;
+        font-size: 36px;
+    }
+}
+
+.button,
+.learn-more-btn {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    background-color: #635436;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Added transition */
+
+    @media (max-width: 767px){
+        font-size: 18px;
+    }
+}
+
+.button:hover,
+.learn-more-btn:hover {
+    background-color: #7a6842; /* Medium brown for hover */
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    color: #FFF; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    /*===== background-color: #635436; =====*/
+
+
+    .container {
+        width: 100%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        h2 {
+            color: inherit;
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 900;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        nav {
+            display: grid;
+            grid-gap: 16px;
+            grid-template-columns: repeat(4, auto);
+
+            @media(max-width: 767px) {
+                display: none;
+            }
+
+            a {
+                color: inherit;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.is-scrolling {
+        background-color: #999966;
+        .container {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+}
+
+main {
+    section.banner {
+        color: black;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+
+        background-image: url('IMG_1271.jpg');
+        background-position: center;
+        background-size: cover;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background-color: #8a8a5c;
+            opacity: 0.7;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+
+            h1 {
+                font-size: 72px;
+                margin-bottom: 32px;
+
+                span {
+                    color: #FFF;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 32px;
+                }
+            }
+
+            h3 {
+                font-size: 36px;
+                font-weight: 400;
+                margin-bottom: 32px;
+
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+/* ------ SERVICES ------ */
+
+    .services {
+
+        .container {
+            padding-top: 64px;
+            padding-bottom: 64px;
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 16px;
+
+                @media(max-width: 1024px){
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (max-width: 767px) {
+                    grid-template-columns: 1fr
+                }
+                
+                .service {
+                    background-color: #FFF;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        transform: translateY(-8px) scale(1.03);
+                        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
+                    }
+
+                    .img-box{
+                        display: block;
+                        width: 100%;
+                        border-bottom: 5px solid #8a8a5c;
+
+                        .img {
+                            display: block;
+                            width: 100%;
+                            height: 128px;
+                            object-fit: cover;
+                        }
+                    }
+                    .content {
+                        padding: 16px;
+                        font-family: Montserrat;
+                    }
+                }
+            }
+        }
+    }
+
+/* ------ Projects ------ */
+
+    .projects {
+        padding-top: 64px;
+        padding-bottom: 64px;
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 16px;
+            margin-bottom: 32px;
+
+            @media(max-width: 768px){
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                background-image: url('pollination.jpg');
+                border-radius: 16px;
+                overflow: hidden;
+                background-position: center;
+                background-size: cover;
+
+                .content {
+                    opacity: 0;
+                    color: #FFF;
+                    padding: 16px;
+                    background-color: rgba(64, 39, 68, 0.8);
+                    width: 100%;
+                    transition: 0.4s;
+                    
+
+                    h3 {
+                        font-size: 32px;
+                        margin-bottom: 16px;
+
+                        @media(max-width: 1024px){
+                            font-size: 28px;
+                        }
+                    }
+
+                    p {
+                        font-size: 18px;
+                        margin-bottom: 16px;
+
+                        @media(max-width: 1024px){
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .content {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .center {
+            text-align: center;
+        }
+    }
+
+/*------ Journey ------ */
+
+    .journey {
+        padding-top: 64px;
+        padding-bottom: 64px;
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(99, 84, 54, 0.12);
+            padding: 48px 32px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+
+            h2 {
+                text-decoration: none;
+                font-size: 40px;
+                font-family: 'Protest Revolution', 'Montserrat', cursive;
+                background: linear-gradient(90deg, #bfa14a 30%, #635436 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 24px;
+                letter-spacing: 2px;
+                text-align: center;
+                position: relative;
+            }
+
+            h2::after {
+                content: '';
+                display: block;
+                margin: 12px auto 0 auto;
+                width: 60px;
+                height: 4px;
+                border-radius: 2px;
+                background: linear-gradient(90deg, #bfa14a, #635436);
+                opacity: 0.8;
+            }
+
+            p {
+                font-size: 1.3rem;
+                line-height: 2.2rem;
+                font-family: 'Indie Flower', cursive;
+                color: #444;
+                text-align: center;
+                margin-top: 24px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+/* ------ Contact ------ */
+
+    .contact {
+        background-color: #9d9787;
+
+        .container {
+            padding-top: 64px;
+            padding-bottom: 64px;
+            h2 {
+                color: #FFF;
+            }
+
+            form {
+                max-width: 680px;
+                display: block;
+                margin: 0 auto;
+
+                .form-grid {
+                    display: grid;
+                    grid-gap: 16px;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin-bottom: 16px;
+
+                    @media (max-width: 767px) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    .form-element, .form-area {
+                        appearance: none;
+                        border: none;
+                        outline: none;
+                        background: none;
+
+                        display: block;
+                        width: 100%;
+                        background-color: #FFF;
+                        border-radius: 8px;
+
+                        padding: 16px;
+                        font-size: 20px;
+                        color: #313131;
+
+                        &:placeholder {
+                            color: #AAA;
+                        }
+                    }
+
+                    .form-area {
+                        grid-column: span 2;
+                    }
+                }
+                .right-align {
+                     text-align: right;
+                }
+            }
+        }
+
+
+
+
+    }
+}
+
+.copy {
+    .background-color {#9c8e8e};
+    width: 100%;
+    margin: auto 0;    
+}
+
+@media (max-width: 767px) {
+    .hide-mob {
+        display: none;
+    }
+}
+
+input[name="_honey"] {
+    display: none;
+}
