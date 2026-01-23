@@ -126,7 +126,7 @@ header {
         .container {
             padding-top: 16px;
             padding-bottom: 16px;
-            opacity: 0.4;
+            backdrop-filter: blur(10px);
         }
     }
 }
@@ -438,5 +438,6 @@ main {
 input[name="_honey"] {
     display: none;
 }
+
 
 
