@@ -108,6 +108,7 @@ header {
             display: grid;
             grid-gap: 16px;
             grid-template-columns: repeat(4, auto);
+            backdrop-filter: blur(5px);
 
             @media(max-width: 767px) {
                 display: none;
@@ -123,11 +124,9 @@ header {
 
     &.is-scrolling {
         background-color: #999966;
-                    opacity: 0.5;
         .container {
             padding-top: 16px;
             padding-bottom: 16px;
-            backdrop-filter: blur(5px);
         }
     }
 }
@@ -439,6 +438,7 @@ main {
 input[name="_honey"] {
     display: none;
 }
+
 
 
 
