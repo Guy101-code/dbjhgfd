@@ -123,10 +123,10 @@ header {
 
     &.is-scrolling {
         background-color: #999966;
+                    opacity: 0.5;
         .container {
             padding-top: 16px;
             padding-bottom: 16px;
-            opacity: 0.5;
         }
     }
 }
@@ -438,6 +438,7 @@ main {
 input[name="_honey"] {
     display: none;
 }
+
 
 
 
