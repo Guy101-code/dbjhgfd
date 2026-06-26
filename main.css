@@ -220,6 +220,8 @@ main {
                 font-size: 36px;
                 font-weight: 400;
                 margin-bottom: 32px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
 
                 @media (max-width: 767px) {
                     font-size: 20px;
